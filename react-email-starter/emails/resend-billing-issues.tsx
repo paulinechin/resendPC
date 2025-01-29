@@ -37,7 +37,7 @@ export const ResendBillingIssueEmail = ({
       <Container style={container}>
         <Section style={box}>
           <Img
-            src={`https://github.com/paulinechin/resendPC/blob/main/react-email-starter/emails/static/resend-wordmark-black.png`}
+            src={`https://images.squarespace-cdn.com/content/62bb6f1e99374413509a8112/b2b8dbe4-cb1a-4fd0-a2af-e8d10f38ad9b/resend-wordmark-black.png`}
             width="150"
             height="49"
             alt="Resend"

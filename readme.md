@@ -128,7 +128,7 @@ const paragraph = {
 };
 ```
 
-## Prepare send file 
+## Prepare the email file 
 Node.js SDK install automatically created a file called index.ts. We add the new react email template and adjust 'To' and 'From' emails. 
 
 1. Import react email template 
@@ -146,7 +146,6 @@ from: 'Resend Team <blackhole@resend.paulinechin.com>',
 3. Add a new subject and react email content
 ```
     subject: 'We couldn\'t process your payment.',
-    //html: '<strong>It works!</strong>',
     react: ResendBillingIssueEmail({ username: "Pauline",
       cardtype: "MasterCard",
       lastfourdigits: 7656,
