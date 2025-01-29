@@ -56,7 +56,7 @@ const resend = new Resend(process.env.RESEND_KEY);
 
 ## Add your resend API key
 ``` 
-RESEND_KEY = secret_key
+export RESEND_KEY = secret_key
 ```
 
 Add dev script to package.json file,
@@ -72,13 +72,15 @@ Let's rebuild.
 npm install
 ```
 
+## Send out your first HTML email
 You're ready to start sending HTML emails. 
 
 ```
 npm run dev 
 ``` 
 
-It is recommended that you use react emails for to build out email templates. Add react email to your project. 
+## Add react email 
+It is recommended that you use react emails to build out email templates. Add react email to your project. 
 ```
 npx create-email@latest
 ```
