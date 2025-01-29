@@ -18,20 +18,67 @@ Sign up for a free Resend account and [Create an API key](https://resend.com/api
 [Verify your domain](https://resend.com/domains)
 
 ## Setup your project
-Install Resend Node.js SDK.
+Create your new project and install Resend Node.js SDK.
+```
+mkdir project-name 
+```
+
+```
+cd project-name 
+```
 
 ```
 npm install resend
 ```
 
-## Create an .env file and add your resend API key
-``` 
-RESEND_KEY = re_8m9gwsVG_6n94KaJkJ323Yj6qSeVvLq9xF
+Add a new file called send.ts with the example code below.
+
+```
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_KEY);
+
+(async function () {
+  const { data, error } = await resend.emails.send({
+    from: 'Resend Team <blackhole@resend.paulinechin.com>',
+    to: ['hello@paulinechin.com'],,
+    subject: 'Hello World',
+    html: '<strong>It works!</strong>',
+  });
+
+  if (error) {
+    return console.error({ error });
+  }
+
+  console.log({ data });
+})();
 ```
 
-While you can generate HTML emails, it is recommended that you use react emails for ease of development. 
+## Add your resend API key
+``` 
+RESEND_KEY = secret_key
+```
 
-Add react email to your project. 
+Add dev script to package.json file,
+```
+  "scripts": {
+    "dev": "ts-node index.ts"
+  }
+```
+
+Let's rebuild. 
+
+```
+npm install
+```
+
+You're ready to start sending HTML emails. 
+
+```
+npm run dev 
+``` 
+
+It is recommended that you use react emails for to build out email templates. Add react email to your project. 
 ```
 npx create-email@latest
 ```
