@@ -64,6 +64,12 @@ export const ResendBillingIssueEmail = ({
             We're here to help! 
           </Text>
           <Text style={paragraph}>— Resend Team</Text>
+          
+          <Text style={paragraph}> {" "}
+            <Link style={anchor} href="https://github.com/paulinechin/resendPC">
+            Link to Git Repo
+            </Link>{" "}
+          </Text>
           <Hr style={hr} />
           <Text style={footer}>
             Resend, 2261 Market Street #5039, San Francisco, CA 94114
