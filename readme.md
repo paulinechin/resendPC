@@ -2,7 +2,7 @@
 
 ## Getting Started 
 
-Select your tech stack and environment. In this particular tutuorial, we'll be using node.js on the server side and React for email design. For details on other configurations, go to [Resend Quick doc](https://resend.com/docs/introduction).   
+Select your tech stack and environment. In this particular tutorial, we'll be using node.js on the server side and react email. For details on other configurations, go to [Resend Quick doc](https://resend.com/docs/introduction).   
 
 You'll need the following in your system.  
 
@@ -18,13 +18,13 @@ I'm a huge fan of [Homebrew](https://brew.sh/). It's my go-to package manager.
 [Verify your domain](https://resend.com/domains)
 
 ## Install
-Install resend Node.js SDK using your CLI. 
+Install Resend Node.js SDK using your CLI. 
 
 ```
 npm install resend
 ```
 
-While you can use generate HTML emails, it is recommended that you use ReactEmails for ease of development. 
+While you can generate HTML emails, it is recommended that you use ReactEmails for ease of development. 
 
 Add react email to your project. 
 ```
@@ -49,13 +49,13 @@ RESEND_KEY = re_8m9gwsVG_6n94KaJkJ323Yj6qSeVvLq9xF
 npm run dev
 ```
 
-Visit localhost:3000 on your browser to view sample templates. As you edit the templates in the emails folder, you'll see the changes on localhost:3000. Here you can dupliate the existing template file or create something completely from scratch. I opt-in to duplciate an existing template since we want a fairly simple design for the billing issue email. 
+Visit localhost:3000 on your browser to view sample templates. As you edit the templates in the emails folder, you'll see the changes on localhost:3000. Here you can duplicate the existing template file or create something completely from scratch. I opt-in to duplicate an existing template since we want a fairly simple design for the billing issue email. 
 
 ## Build/Edit your email template
 
 Adjust the email default content. 
 
-Declare variable you'd like to passthrough to the email. In particular, I like the four data points like name, credit card, card type and plan to show up in the email message. 
+Declare variables you'd like to pass through to the email. In particular, I use the four data points like name, credit card, card type, and plan to show up in the email message. 
 
 ```
 interface ResendEmailProps {
@@ -66,7 +66,7 @@ interface ResendEmailProps {
 }
 ```
 
-There will be a collection of styling code for different part of the email. Adjust them as needed. 
+There will be a collection of styling codes for different parts of the email. Adjust them as needed. 
 
 Example: 
 ```
@@ -80,7 +80,7 @@ const paragraph = {
 ```
 
 ## Prepare .ts file 
-Node,js SDK automatically created a file called index.ts. We update this with the new react email template and adjust To and From emails. 
+Nod.js SDK automatically created a file called index.ts. We update this with the new react email template and adjust To and From emails. 
 
 ### Import react email template 
 ```
